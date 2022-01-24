@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "tofurkey-executor",
+    "name": "tofurkey",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "hlt9tebjga",
+    "module": "api"
+  }
+}
