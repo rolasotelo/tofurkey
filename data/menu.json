@@ -1,21 +1,21 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Tofurkey",
     "ingredients": ["tofu", "cranberry-wine sauce", "celery"]
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "Glazed Watermelon",
     "ingredients": ["watermelon", "cranberry glaze"]
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "Coconut Calamary",
     "ingredients": ["coconut", "bread", "huatulco sauce"]
   },
   {
-    "id": 4,
+    "id": "4",
     "name": "BBQ Hamburguer",
     "ingredients": ["molida sin res", "jack fruit", "bbq sauce"]
   }
