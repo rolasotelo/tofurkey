@@ -36,7 +36,7 @@ api.put(
   (request) => {
     return updateOrder({ order: request.body, orderId: request.pathParams.id });
   },
-  { success: 201, error: 400 }
+  { error: 400 }
 );
 
 api.delete(
@@ -44,7 +44,7 @@ api.delete(
   (request) => {
     return deleteOrder(request.pathParams.id);
   },
-  { success: 201, error: 400 }
+  { error: 400 }
 );
 
 module.exports = api;

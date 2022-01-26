@@ -4,7 +4,7 @@ function updateOrder({ order, orderId }) {
       "To update your dinner please provide the orderId and updated order."
     );
 
-  return `Updated order ${orderId}`;
+  return { message: `Updated order ${orderId}` };
 }
 
 module.exports = updateOrder;
