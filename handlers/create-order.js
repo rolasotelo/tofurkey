@@ -1,5 +1,5 @@
 const AWS = require("aws-sdk");
-const uuid = require("uuid");
+const { v4: uuidv4 } = require("uuid");
 const docClient = new AWS.DynamoDB.DocumentClient();
 
 function createOrder(order) {
@@ -12,7 +12,7 @@ function createOrder(order) {
     .put({
       TableName: "dinner-orders",
       Item: {
-        orderId: uuid(),
+        orderId: uuidv4(),
         item: order.itemId,
         address: order.address,
         orderStatus: "pending",
