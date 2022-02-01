@@ -8,23 +8,26 @@ function updateOrder({ order, orderId }) {
     );
 
   return docClient
-    .put({
+    .update({
       TableName: "dinner-orders",
-      Item: {
+      Key: {
         orderId: orderId,
-        item: order.itemId,
-        address: order.address,
-        orderStatus: "pending",
       },
+      UpdateExpression: "set pizza = :p, address = :a",
+      ExpressionAttributeValues: {
+        ":p": order.itemId,
+        ":a": order.address,
+      },
+      ReturnValues: "ALL_NEW",
     })
     .promise()
     .then((res) => {
-      console.log("Order was updated!", res);
-      return res;
+      console.log("Order is updated!", res);
+      return res.Attributes;
     })
-    .catch((saveError) => {
-      console.log("Ops order was not updated :(", saveError);
-      throw saveError;
+    .catch((updateError) => {
+      console.log("Ops order is not updated :(", updateError);
+      throw updateError;
     });
 }
 
