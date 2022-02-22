@@ -14,12 +14,12 @@ function deleteOrder(orderId) {
     })
     .promise()
     .then((res) => {
-      console.log("Order was deleted!", res);
+      console.log("Order is deleted!", res);
       return res;
     })
-    .catch((saveError) => {
-      console.log("Ops order was not deleted :(", saveError);
-      throw saveError;
+    .catch((deleteError) => {
+      console.log("Ops order is not deleted :(", deleteError);
+      throw deleteError;
     });
 }
 
