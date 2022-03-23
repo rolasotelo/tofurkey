@@ -1,6 +1,6 @@
 {
   "name": "tofurkey",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "api.js",
   "repository": "git@github.com:rolasotelo/tofurkey.git",
   "author": "Rolando Sotelo <rola@hey.com>",
