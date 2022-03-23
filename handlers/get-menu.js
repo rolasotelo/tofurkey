@@ -1,15 +1,13 @@
-const menu = require("../data/menu.json");
+const menu = require('../data/menu.json');
 
 function getMenu(itemId) {
   if (!itemId) return menu;
 
-  const item = menu.find((item) => {
-    return item.id === itemId;
-  });
+  const foundItem = menu.find((item) => item.id === itemId);
 
-  if (item) return item;
+  if (foundItem) return foundItem;
 
-  throw new Error("The menu item you requested was not found");
+  throw new Error('The menu item you requested was not found');
 }
 
 module.exports = getMenu;

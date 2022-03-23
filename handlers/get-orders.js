@@ -1,11 +1,12 @@
-const AWS = require("aws-sdk");
+const AWS = require('aws-sdk');
+
 const docClient = new AWS.DynamoDB.DocumentClient();
 
 function getOrders(orderId) {
-  if (typeof orderId === "undefined") {
+  if (typeof orderId === 'undefined') {
     return docClient
       .scan({
-        TableName: "dinner-orders",
+        TableName: 'dinner-orders',
       })
       .promise()
       .then((result) => result.Items);
@@ -13,9 +14,9 @@ function getOrders(orderId) {
 
   return docClient
     .get({
-      TableName: "dinner-orders",
+      TableName: 'dinner-orders',
       Key: {
-        orderId: orderId,
+        orderId,
       },
     })
     .promise()
