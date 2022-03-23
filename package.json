@@ -7,7 +7,10 @@
   "license": "MIT",
   "scripts": {
     "create": "claudia create --region us-east-1 --api-module api --profile claudia",
-    "update": "claudia update --profile claudia"
+    "update": "claudia update --profile claudia",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'docs(📓): Update CHANGELOG.md' && npm version major && git push --tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'docs(📓): Update CHANGELOG.md' && npm version minor && git push --tags",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'docs(📓): Update CHANGELOG.md' && npm version patch && git push --tags"
   },
   "dependencies": {
     "aws-sdk": "^2.1064.0",
@@ -16,6 +19,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "claudia": "^5.14.0"
+    "claudia": "^5.14.0",
+    "generate-changelog": "^1.8.0"
   }
 }
