@@ -15,10 +15,12 @@ function updateOrder({ order, orderId }) {
       Key: {
         orderId,
       },
-      UpdateExpression: 'set pizza = :p, address = :a',
+      UpdateExpression: 'set itemId = :p, address = :a',
+      ConditionExpression: 'orderStatus = :s',
       ExpressionAttributeValues: {
         ':p': order.itemId,
         ':a': order.address,
+        ':s': 'pending',
       },
       ReturnValues: 'ALL_NEW',
     })

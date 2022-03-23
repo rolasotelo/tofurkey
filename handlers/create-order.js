@@ -15,7 +15,7 @@ function createOrder(order) {
       TableName: 'dinner-orders',
       Item: {
         orderId: uuidv4(),
-        item: order.itemId,
+        itemId: order.itemId,
         address: order.address,
         orderStatus: 'pending',
       },
