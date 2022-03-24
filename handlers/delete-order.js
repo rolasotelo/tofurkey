@@ -11,6 +11,10 @@ function deleteOrder(orderId) {
       Key: {
         orderId,
       },
+      ConditionExpression: 'orderStatus = :s',
+      ExpressionAttributeValues: {
+        ':s': 'pending',
+      },
     })
     .promise()
     .then((res) => res)

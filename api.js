@@ -20,13 +20,13 @@ api.get(
 
 api.get(
   '/orders',
-  () => getOrders(),
+  (request) => getOrders(null, request.queryString.status),
   { error: 404 },
 );
 
 api.get(
   '/orders/{id}',
-  (request) => getOrders(request.pathParams.id),
+  (request) => getOrders(request.pathParams.id, null),
   { error: 404 },
 );
 

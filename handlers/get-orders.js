@@ -2,11 +2,15 @@ const AWS = require('aws-sdk');
 
 const docClient = new AWS.DynamoDB.DocumentClient();
 
-function getOrders(orderId) {
-  if (typeof orderId === 'undefined') {
+function getOrders(orderId, status) {
+  if (orderId === null) {
     return docClient
       .scan({
         TableName: 'dinner-orders',
+        FilterExpression: 'orderStatus = :s',
+        ExpressionAttributeValues: {
+          ':s': status || 'pending',
+        },
       })
       .promise()
       .then((result) => result.Items);
