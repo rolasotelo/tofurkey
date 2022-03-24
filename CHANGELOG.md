@@ -1,3 +1,22 @@
+### 1.1.0 (2022-03-24)
+
+##### Continuous Integration
+
+* **🏗:**  Add diagram workflow (482f9136)
+
+##### Documentation Changes
+
+* **📓:**
+  *  Update README.md (4772d658)
+  *  Update diagram.svg [skip ci] (3c67deae)
+  *  Update diagram.svg [skip ci] (3a4a7f38)
+
+##### New Features
+
+* **🎉:**
+  *  Add feat to query orders by status (da071464)
+  *  Update update and delete order to work only on pending orders (d42a9491)
+
 #### 1.0.1 (2022-03-23)
 
 ##### Chores
