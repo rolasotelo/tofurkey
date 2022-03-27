@@ -23,4 +23,5 @@ jobs:
         with:
           output_file: "diagram.svg"
           commit_message: "docs(📓): Update diagram.svg [skip ci]"
-          
+          excluded_paths: ".idea,.github"
+          excluded_globs: "**/*.gitignore;**/*CHANGELOG.md;**/fonts/*;**/images/*;yarn.lock;PRCHECKLIST"
