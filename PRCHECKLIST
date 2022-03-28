@@ -3,7 +3,7 @@
 # To create a new task, use '+task+' followed by the task description.
 # To create a reminder (a non-blocking comment), use '+comment+' followed by the comment text
 +task+ No local configuration (passwords, comments, debugging) has been committed 🔐.
-+task+ All linked issues has been addressed 👍🏾.
++task+ All linked issues have been addressed 👍🏾.
 
 # To filter when a task is applied, prepend the task/comment/title with one or more of the following filters:
 # '--source' - the source branch
